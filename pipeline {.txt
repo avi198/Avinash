@@ -1,0 +1,18 @@
+pipeline {
+any agent 
+stages{
+   step("build")
+sh "mvn install"
+ }
+}
+stages{
+   steps("test")
+sh "mvn test"
+ }
+}
+steges{
+   steps("deploy")
+ branch "main"
+sh "mvn deploy"
+ }
+}
