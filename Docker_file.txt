@@ -1,0 +1,9 @@
+FROM        Java Jdk17 :/lates
+RUN         install java
+WORKDIR     /app
+COPY        ./app       
+CMD         install java
+ENV         Staging
+
+
+
